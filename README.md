@@ -31,7 +31,7 @@ Follow the instructions at https://developers.google.com/youtube/v3/getting-star
 6. Still in quickify.py, set the value of youtube_playlist to be the name of the YouTube playlist you would like to sync the Spotify songs to. The script will ask you if you would like to create a new playlist if the one specified does not already exist.
 7. Run quickify.py
 8. On the initial run, you will be prompted to visit Spotify and YouTube links as part of the OAuth 2.0 authorisation steps. Follow the instructions to authorise the script to connect to your accounts. This only needs to be performed once.
-9. The script will loop through the tracks in your Spotify playlist and add the first YouTube video that correspond to search of the track's Artist and Title. The script will also remove ay tracks from the specified YouTube playlist that no longer exist in your Spotify playlist.
+9. The script will loop through the tracks in your Spotify playlist and add the first YouTube video that corresponds to a search of the track's Artist and Title. The script will also remove ay tracks from the specified YouTube playlist that no longer exist in your Spotify playlist.
 
 ## Known Issues
 Google only allow a relatively small number of API calls in one 24 hour period. If you have a large playlist, it may not be possible to sync all tracks in one day. If this is the case, you can re-sync the following day and the script will add the missing tracks, or as many as it can until the API call quota is hit again.
