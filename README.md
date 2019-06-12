@@ -4,7 +4,7 @@ A Python script for syncing a Spotify playlist to YouTube.
 ## Getting Started
 You will need to create and register an application with Spotify. Once an application has been created, you will need the **client_id** of the application, the **client_secret** of your application, and the username associated with your Spotify account.
 
-You will also need to create and register an project with YouTube, and 
+You will also need to create and register a project with YouTube.
 
 ### Creating a Spotify Application
 Follow the instructions at https://developer.spotify.com/documentation/web-api/quick-start/ to create a new Spotify application and acquire your **client_id** and **client_secret**. You can use https://localhost/ as a redirect URL.
