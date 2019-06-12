@@ -29,7 +29,7 @@ Follow the instructions at https://developers.google.com/youtube/v3/getting-star
 4. Place the YouTube OAuth 2.0 json file you created into the Quickify project folder
 5. Open quickify.py and set the value of spotify_playlist to be the name of the Spotify playlist you would like to sync. If you would like to sync all saved tracks, set this value to None
 6. Still in quickify.py, set the value of youtube_playlist to be the name of the YouTube playlist you would like to sync the Spotify songs to. The script will ask you if you would like to create a new playlist if the one specified does not already exist.
-7. Run the quickify.py.
+7. Run quickify.py
 8. On the initial run, you will be prompted to visit Spotify and YouTube links as part of the OAuth 2.0 authorisation steps. Follow the instructions to authorise the script to connect to your accounts. This only needs to be performed once.
 9. The script will loop through the tracks in your Spotify playlist and add the first YouTube video that correspond to search of the track's Artist and Title. The script will also remove ay tracks from the specified YouTube playlist that no longer exist in your Spotify playlist.
 
