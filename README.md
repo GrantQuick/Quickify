@@ -36,7 +36,7 @@ Follow the instructions at https://developers.google.com/youtube/v3/getting-star
 ## Known Issues
 Google only allow a relatively small number of API calls in one 24 hour period. If you have a large playlist, it may not be possible to sync all tracks in one day. If this is the case, you can re-sync the following day and the script will add the missing tracks, or as many as it can until the API call quota is hit again.
 
-The script matches songs based on the artist name and song title. It will pick the first result of a YouTube search using those search terms. As such, the video it retunrs may not always be the "official" music video.
+The script matches songs based on the artist name and song title. It will pick the first result of a YouTube search using those search terms. As such, the video it returns may not always be the "official" music video.
 
 The script may remove videos from the playlist in error. This may occur in instances where the title of the video only contains the name of the track and omits the artist. This would result in a false positive and cause the script to remove the video as it cannot be matched to a track.
 
