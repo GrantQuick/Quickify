@@ -1,7 +1,9 @@
 import spotipy
 import spotipy.util as util
+from spotipy.oauth2 import SpotifyOAuth
 
 from textify import clean_string
+
 
 class Spotify:
     
@@ -10,8 +12,7 @@ class Spotify:
 
     def __init__(self, username, client_id, client_secret):
         self.username = username
-        token = util.prompt_for_user_token(self.username,self.__scope,client_id,client_secret,redirect_uri=self.__redirect_uri)
-        self.__sp = spotipy.Spotify(auth=token)
+        self.__sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,client_secret=client_secret,scope=self.__scope,username=self.username,redirect_uri=self.__redirect_uri))
         
     # Get all the saved tracks in the current user's library
     def get_saved_tracks(self):
@@ -48,9 +49,11 @@ class Spotify:
             for item in results['items']:
                 playlists.append([item['name'],item['id']])
 
+
         # If the provided playlist name matches one of the playlists,
         # grab all the tracks from that playlist
         for title_id in playlists:
+
             if playlist_name.lower() in title_id[0].lower():
                 results = self.__sp.user_playlist_tracks(self.username,title_id[1])
                 
@@ -65,4 +68,4 @@ class Spotify:
                         clean_artist = clean_string(item['track']['artists'][0]['name'])
                         clean_track = clean_string(item['track']['name'])
                         tracks.append([clean_artist,clean_track,''])
-            return tracks
+                return tracks
